@@ -1,16 +1,16 @@
 import React, {useState, useEffect} from 'react'
  
-import Posts from './Posts'
-const App = () => {
-  const [name, setName] = useState('')
-  const [post, setPost] = useState('')
+import NewPosts from './NewPosts'
 
+const App = () => {
+  const [newName, setNewName] = useState('')
+  const [newPost, setNewPost] = useState('')
+
+  const [postList, setPostList] = useState([])
   return (
     <div>
-    <input type='text' value={name} onChange={e => setName(e.target.value)}/>
-    <input type='text' value={post} onChange={e => setPost(e.target.value)}/>
-    <h1>{name}</h1>
-    <h1>{post}</h1>
+      <NewPosts newName={newName} setNewName={setNewName} newPost={newPost} setNewPost={setNewPost} postList={postList} setPostList={setPostList}/>
+      <h2>{postList.map((post, id) => {return <li key={id}> {post.newName} {post.newPost} </li>})}</h2>
     </div>
   )
 }
