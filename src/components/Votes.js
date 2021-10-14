@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-const Votes = ({vote, setVote}) => {
+const Votes = ({vote, setVote, name}) => {
         
     return (
         <div>

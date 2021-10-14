@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div>
       <NewPosts newName={newName} setNewName={setNewName} newPost={newPost} setNewPost={setNewPost} postList={postList} setPostList={setPostList}/>
-      <h2>{postList.map((post, id) => {return <li key={id}> <Posts name={post.newName} post={post.newPost}/>></li>})}</h2>      
+      <h2>{postList}</h2>
     </div>
   )
 }

@@ -4,15 +4,11 @@ const Posts = ({name, post}) => {
 
     const [vote, setVote] = useState(0)
 
-    // useEffect(() => {
-    //     console.log('test')   
-    //     setVote(vote + 2)
-    // })
-
     return (
         <div>
-            <Votes vote={vote} setVote={setVote}/>
             <h1>{name}: {post}</h1>
+            <Votes vote={vote} setVote={setVote} name={name}/>
+            <h2>{name}</h2>
         </div>
     ) 
 }
