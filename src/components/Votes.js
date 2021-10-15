@@ -1,11 +1,13 @@
-import React, {useEffect} from 'react'
+import React, {useState} from 'react'
 
-const Votes = ({vote, setVote, name}) => {
+const Votes = () => {
         
+    const [vote, setVote] = useState(0)
+
     return (
         <div>
             <button onClick={() => {
-                setVote(vote + 1)   
+                setVote(vote + 1)  
             }
             }>Upvote</button>
             <button onClick={() => {
