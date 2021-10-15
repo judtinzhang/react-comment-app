@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import Votes from './Votes'
+import Form from './Form'
+
 const Reply = ({depth}) => {
     
     const [newName, setNewName] = useState('')
     const [newPost, setNewPost] = useState('')
     const [showReply, setShowReply] = useState(false)
-    const [replyList, setReplyList] = useState([])
 
     if (depth === 0) {
         return null
@@ -27,15 +27,7 @@ const Reply = ({depth}) => {
             {showReply && (
                 <div>                    
                 <div>{newName} -- {newPost}</div>
-                <Votes/>
-                {depth > 1 && (
-                    <div>
-                        <button onClick={() => {
-                            {setReplyList([...replyList, <Reply depth={depth-1}/> ])}              
-                        }}>Reply</button>
-                        {replyList.map((reply, idx) => {return <div key={idx}> {reply} </div>})}
-                    </div>
-                )}
+                <Form depth={depth-1}/>
             </div>
             )}
         </>

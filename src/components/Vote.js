@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Votes = () => {
+const Vote = () => {
         
     const [vote, setVote] = useState(0)
 
@@ -19,4 +19,4 @@ const Votes = () => {
     )
 }
 
-export default Votes
+export default Vote
