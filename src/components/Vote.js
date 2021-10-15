@@ -6,11 +6,11 @@ const Vote = () => {
 
     return (
         <div>
-            <button onClick={() => {
+            <button class='button' onClick={() => {
                 setVote(vote + 1)  
             }
             }>Upvote</button>
-            <button onClick={() => {
+            <button class='button' onClick={() => {
                 setVote(vote - 1)   
             }
             }>Downvote</button>

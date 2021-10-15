@@ -11,7 +11,7 @@ const Form = ({depth}) => {
             <Vote/> 
             {depth > 1 && (
                 <div>
-                     <button onClick={() => {
+                     <button class='button' onClick={() => {
                         {setReplyList([...replyList, <Reply depth={depth}/> ])}              
                     }}>Reply</button>
                     {replyList.map((reply, idx) => {return <div key={idx}> {reply} </div>})}
