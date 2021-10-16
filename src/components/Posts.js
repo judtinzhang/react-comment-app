@@ -3,8 +3,10 @@ import Form from './Form'
 const Posts = ({name, post}) => {
     
     return (
-        <div class='post'>   
-            {name}: {post}
+        <div class='box post column'>
+            <div>Post by: {name}</div>
+            <div>{post}</div>
+            <br></br>
             <Form depth={3}/>  
         </div>
     ) 

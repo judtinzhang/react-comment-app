@@ -13,11 +13,12 @@ const Reply = ({depth}) => {
 
     return (
         <>
+            <br></br>
             {!showReply && (
                 <div>
-                    <input class='input' type='text' value={newName} onChange={e => setNewName(e.target.value)}/>
-                    <input class='input' type='text' value={newPost} onChange={e => setNewPost(e.target.value)}/>
-                    <button class='button' onClick={() => {
+                    <input class='input is-primary' placeholder="Name..." type='text' value={newName} onChange={e => setNewName(e.target.value)}/>
+                    <input class='input is-primary' placeholder="Comment..." type='text' value={newPost} onChange={e => setNewPost(e.target.value)}/>
+                    <button class='button is-primary is-small' onClick={() => {
                         if (newName && newPost) {
                             setShowReply(true)
                         }
@@ -26,7 +27,9 @@ const Reply = ({depth}) => {
             )}
             {showReply && (
                 <div>                    
-                <h1>{newName} -- {newPost}</h1>
+                <div>Reply by: {newName}</div>
+                <div>{newPost}</div>
+                <br></br>
                 <Form depth={depth-1}/>
             </div>
             )}
